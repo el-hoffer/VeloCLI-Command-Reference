@@ -22,4 +22,4 @@ edged                 16145   1
 |-------------|-------------------------------------------------|
 | Thread Name | The descriptive name of the thread.             |
 | Thread ID   | The unique process identifier for the thread.   |
-| ON          | Indicates the operational state of the thread (1 typically means active/on). |
+| ON          | Indicates the context logging status (`1` means logging is enabled, `0` is disabled). |
