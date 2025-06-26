@@ -3,7 +3,7 @@
 ##	Description
 Displays the current status of the automatic SIM switching feature on the VeloCloud Edge. This feature allows the Edge to automatically switch to a secondary SIM card if the primary SIM card loses connectivity, ensuring continuous cellular WAN uptime.
 
-##  Arguments (optional)
+##  Arguments
 | Argument | Description |
 |---|---|
 | none | This command does not take any arguments. |
