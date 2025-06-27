@@ -1,9 +1,9 @@
 #	--denylist_dump
 
 ##	Description
-This command displays the table of source IP addresses that have been denylisted by the VeloCloud Edge's stateful firewall. It also indicates whether stateful firewall denylisting is enabled for IPv4 and IPv6 traffic.
+This command displays the table of source IP addresses that have been denylisted by the VeloCloud Edge's stateful firewall flood protection mechanism. It also indicates whether stateful firewall denylisting is enabled for IPv4 and IPv6 traffic.
 
-##  Arguments (optional)
+##  Arguments
 | Argument | Description |
 |---|---|
 | none | This command does not take any arguments. |
@@ -12,11 +12,11 @@ This command displays the table of source IP addresses that have been denylisted
 ```
 example_com:velocli> debug --denylist_dump
 Stateful Firewall Denylisting : IPv4 : Disabled
-                                IPv6 : Disabled
+                                IPv6 : Enabled
 ====================== SOURCE-IP LIST ====================
-SOURCE-IP   EXPIRES IN(sec)
+SOURCE-IP       EXPIRES IN(sec)
+fd00:5:1:1::2                69
 
-example_com:velocli>
 ```
 
 ##  Field descriptions
