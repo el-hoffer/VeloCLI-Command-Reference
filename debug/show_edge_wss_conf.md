@@ -18,7 +18,7 @@ example_com:velocli> debug --show_edge_wss_conf
       "vni": 12555342
     },
     "logicalId": "aaefbda9-116b-471f-8afc-db0842da729",
-    "name": "Test1",
+    "name": "Symantec WSS Test",
     "segmentId": 0
   }
 ]
