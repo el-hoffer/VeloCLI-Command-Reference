@@ -1,9 +1,9 @@
 #	--cluster_edge_table
 
 ##	Description
-This command displays the mapping table between clusters and the VeloCloud Edges associated with them. In a VeloCloud SD-WAN deployment, Edges can be grouped into clusters for high availability and scalability. This table provides a quick overview of these relationships.
+This command displays the mapping table between peer clusters and the VeloCloud Edges associated with them.
 
-##  Arguments (optional)
+##  Arguments
 | Argument | Description |
 |---|---|
 | none | This command does not take any arguments. |
@@ -11,11 +11,18 @@ This command displays the mapping table between clusters and the VeloCloud Edges
 ##  Example usage
 ```
 example_com:velocli> debug --cluster_edge_table
-[]
+[
+  {
+    "cluster_id": "2e56aa7a-6f8b-4802-a2d1-3be3f97387ae",
+    "initiators": [],
+    "responder_id": "e1330e2d-632c-40af-8e54-64544ac41647"
+  }
+]
 ```
-In this example, the output `[]` indicates that there are currently no cluster-to-edge mappings configured or active on this particular VeloCloud Edge, or the command is run on a non-clustered Edge.
 
 ##  Field descriptions
 | Column | Description |
 |---|---|
-| N/A | The example output `[]` indicates an empty table, meaning there are no specific fields to describe for this output. If clusters and edges were mapped, the output would typically list cluster identifiers and their corresponding edge identifiers. |
+| `cluster_id` | Logical ID of the peer cluster |
+| `initiators` | Logical ID of cluster member initiators (if any) |
+| `responder_id` | Logical ID of assigned destination cluster member. |
