@@ -1,7 +1,7 @@
 #	--edge_cluster_table
 
 ##	Description
-Dumps the edge cluster mapping table. This table shows the association of VeloCloud Edges (VCEs) to their respective clusters. Edge clustering is typically used for High Availability (HA) and resilience.
+Dumps the edge cluster mapping table showing the association of VeloCloud Edges (VCEs) to their respective clusters.
 
 ##	Arguments (optional)
 This command takes no arguments.
@@ -9,12 +9,13 @@ This command takes no arguments.
 ##	Example usage
 ```
 example_com:velocli> debug --edge_cluster_table
-VCE-ID   ClusterId  Dir
+VCE-ID                                                            ClusterId  Dir
+8a8601b2-0086-4d06-a22f-5edefc37d339   891413b5-4fd7-417f-8efc-102aeb579df8  OUT
 ```
 
 ##	Field descriptions
 | Column    | Description |
 |-----------|-------------|
-| VCE-ID    | VeloCloud Edge Identifier. The unique identifier for the VeloCloud Edge. |
-| ClusterId | Cluster Identifier. The identifier of the cluster to which the VeloCloud Edge belongs. Edges are often grouped into clusters for High Availability (HA) or load distribution. |
-| Dir       | This field indicates a specific attribute, role, or status of the Edge in relation to its membership within the cluster. The exact interpretation may depend on the specific clustering model and configuration (e.g., it could denote an operational state, a role like active/standby in some contexts, or a configuration parameter). |
+| VCE-ID    | Logical ID of the assigned VeloCloud Edge cluster member. |
+| ClusterId | Logical ID of the destination cluster. |
+| Dir       | Direction in which the tunnel was initiated (`IN` or `OUT`). |
